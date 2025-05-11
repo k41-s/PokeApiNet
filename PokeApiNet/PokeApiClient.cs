@@ -144,6 +144,7 @@ namespace PokeApiNet
             if (resource == null)
             {
                 resource = await GetResourcesWithParamsAsync<T>(resourceId, cancellationToken);
+                
                 _resourceCache.Store<T>(resource);
             }
 
